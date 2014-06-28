@@ -1,0 +1,80 @@
+@import (reference) "../flexbox";
+
+// Scoped mixins tests
+.test {
+	#flexbox;
+
+	.flex { // .test .flex
+
+		&--basis { // .test .flex--basis
+
+			&-percentage { // .test .flex--basis-percentage
+				.flex(10%);
+			}
+
+			&-keyword { // .test .flex--basis-keyword
+				.flex(auto);
+			}
+		}
+
+		&--grow { // .test .flex--grow
+			.flex(1);
+
+			&-basis { // .test .flex--grow-basis
+
+				.basis { // .test .flex--grow-basis .basis
+					&-percentage { // .test .flex--grow-basis .basis-percentage
+						.flex(0, 10%);
+					}
+
+					&-keyword { // .test .flex--grow-basis .basis-keyword
+						.flex(1, auto);
+					}
+				}
+			}
+
+			&--grow-shrink { // .test .flex--grow-shrink
+				.flex(0, 1);
+			}
+		}
+
+		&-flow { // .test .flex-flow
+			&--direction {
+				.flow(row-reverse);
+			}
+
+			&--wrap {
+				.flow(nowrap);
+			}
+
+			&--direction-wrap {
+				.flow(column, wrap);
+			}
+		}
+	}
+}
+
+// Scoped extends tests
+.test {
+	.flexbox & {
+		&:extend(
+			._flex .display--flex,
+			._flex .align-items--center,
+			._flex .justify-content--space-around,
+			._flex .direction--column-reverse,
+			._flex .wrap--wrap
+		);
+	}
+}
+
+.test2 {
+	.flexbox & {
+		&:extend(
+			._flex .display--flex,
+			._flex .align-items--flex-start,
+			._flex .justify-content--space-between,
+			._flex .direction--row,
+			._flex .wrap--wrap
+		);
+	}
+}

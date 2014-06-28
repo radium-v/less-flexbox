@@ -1,0 +1,87 @@
+.flexbox .test {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.flexbox .test2 {
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.flexbox .test {
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+.flexbox .test2 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.flexbox .test,
+.flexbox .test2 {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flexbox .test {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+.flexbox .test2 {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.flexbox .test,
+.flexbox .test2 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.test .flex--basis-percentage {
+  -webkit-flex: 10%;
+  -ms-flex: 10%;
+  flex: 10%;
+}
+.test .flex--basis-keyword {
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+}
+.test .flex--grow {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.test .flex--grow-basis .basis-percentage {
+  -webkit-flex: 0 10%;
+  -ms-flex: 0 10%;
+  flex: 0 10%;
+}
+.test .flex--grow-basis .basis-keyword {
+  -webkit-flex: 1 auto;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+}
+.test .flex--grow--grow-shrink {
+  -webkit-flex: 0 1;
+  -ms-flex: 0 1;
+  flex: 0 1;
+}
+.test .flex-flow--direction {
+  -webkit-flex-flow: row-reverse;
+  -ms-flex-flow: row-reverse;
+  flex-flow: row-reverse;
+}
+.test .flex-flow--wrap {
+  -webkit-flex-flow: nowrap;
+  -ms-flex-flow: nowrap;
+  flex-flow: nowrap;
+}
+.test .flex-flow--direction-wrap {
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
